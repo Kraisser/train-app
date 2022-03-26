@@ -2,15 +2,15 @@ import './deleteModal.css';
 
 import {useSelector, useDispatch} from 'react-redux';
 
-import {delModalClose} from '../../actions/actions';
+import {delModalClose} from '../../store/modalSlice';
 import useUpload from '../../services/useUpload';
 
 export default function DeleteModal() {
 	const dispatch = useDispatch();
 	const {deleteExercise} = useUpload();
 
-	const delModalStatus = useSelector((state) => state.delModalStatus);
-	const activeProgram = useSelector((state) => state.activeProgram);
+	const delModalStatus = useSelector((state) => state.modal.delModalStatus);
+	const activeProgram = useSelector((state) => state.program.activeProgram);
 
 	const onDeleteEx = () => {
 		deleteExercise(delModalStatus, activeProgram);

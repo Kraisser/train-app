@@ -3,14 +3,8 @@ import {useDispatch} from 'react-redux';
 import useRequests from './useRequests';
 import useUpdate from './useUpdate';
 
-import {
-	setActiveProgram,
-	exListError,
-	exListSuccess,
-	exListLoading,
-	programListSuccess,
-	programListError,
-} from '../actions/actions';
+import {exListError, exListSuccess, exListLoading} from '../store/exerciseSlice.js';
+import {programListSuccess, programListError, setActiveProgram} from '../store/programSlice';
 
 export default function useUpload() {
 	const dispatch = useDispatch();

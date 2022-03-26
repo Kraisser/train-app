@@ -14,8 +14,8 @@ export default function ExerciseDescription() {
 
 	const id = useParams().id;
 
-	const exList = useSelector((state) => state.exerciseList);
-	const exListStatus = useSelector((state) => state.exerciseListStatus);
+	const exList = useSelector((state) => state.exercise.exerciseList);
+	const exListStatus = useSelector((state) => state.exercise.exerciseListStatus);
 
 	useEffect(() => {
 		if (exListStatus !== 'idle') {

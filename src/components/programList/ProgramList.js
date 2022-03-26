@@ -14,8 +14,8 @@ import useUpload from '../../services/useUpload';
 export default function ProgramList() {
 	const {updatePrograms} = useUpdate();
 
-	const programList = useSelector((state) => state.programList);
-	const status = useSelector((state) => state.programListStatus);
+	const programList = useSelector((state) => state.program.programList);
+	const status = useSelector((state) => state.program.programListStatus);
 
 	useEffect(() => {
 		if (status !== 'idle') {

@@ -11,13 +11,6 @@
       "description": "asd",
       "exerciseList": [
         {
-          "id": "6cd71371-b268-4b25-9ca6-49aae0fe04e8",
-          "name": "fas",
-          "muscles": "fsa",
-          "img": "fas",
-          "description": "fsa"
-        },
-        {
           "id": "19f3c2e4-7c83-40ee-9367-f36231c0087a",
           "name": "fasfsa",
           "muscles": "fsasaf",
@@ -37,6 +30,13 @@
           "muscles": "fsasaf",
           "img": "fasfsa",
           "description": "fsafas"
+        },
+        {
+          "id": "becfe450-c010-477b-a0a5-8f8e49674db9",
+          "name": "sfa",
+          "muscles": "fsaasf",
+          "img": "fsafas",
+          "description": "fsasfa"
         }
       ]
     }

@@ -1,6 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit';
 
-import reducer from '../reducer/reducer';
+import {default as exercise} from './exerciseSlice';
+import {default as program} from './programSlice';
+import {default as modal} from './modalSlice';
 
 const stringMiddleware = () => (dispatch) => (action) => {
 	if (typeof action === 'string') {
@@ -12,7 +14,7 @@ const stringMiddleware = () => (dispatch) => (action) => {
 };
 
 const store = configureStore({
-	reducer: reducer,
+	reducer: {exercise, program, modal},
 	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(stringMiddleware),
 	devTools: process.env.NODE_ENV !== 'production',
 });

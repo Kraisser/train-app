@@ -1,20 +1,14 @@
 import {useDispatch, useSelector} from 'react-redux';
 
 import useRequests from './useRequests';
-import {
-	exListError,
-	exListSuccess,
-	exListLoading,
-	programListSuccess,
-	programListError,
-	setActiveProgram,
-} from '../actions/actions';
+import {exListError, exListSuccess, exListLoading} from '../store/exerciseSlice.js';
+import {programListSuccess, programListError, setActiveProgram} from '../store/programSlice';
 
 export default function useUpdate() {
 	const dispatch = useDispatch();
 	const {getExercises, getProgramList} = useRequests();
 
-	const activeProgram = useSelector((state) => state.activeProgram);
+	const activeProgram = useSelector((state) => state.program.activeProgram);
 
 	const updateExercises = (path = activeProgram) => {
 		dispatch(exListLoading());

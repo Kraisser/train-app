@@ -3,12 +3,12 @@ import './exerciseItem.css';
 
 import {Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import {delModalOpen} from '../../actions/actions';
+import {delModalOpen} from '../../store/modalSlice';
 
 export default function ExerciseItem({exercise}) {
 	const dispatch = useDispatch();
 
-	const activeProgram = useSelector((state) => state.activeProgram);
+	const activeProgram = useSelector((state) => state.program.activeProgram);
 
 	const {img, name, muscles, id} = exercise;
 

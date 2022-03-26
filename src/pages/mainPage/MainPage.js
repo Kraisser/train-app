@@ -9,7 +9,7 @@ import PageHeader from '../../components/pageHeader/PageHeader';
 import DeleteModal from '../../components/DeleteModal/DeleteModal';
 
 export default function MainPage() {
-	const delModalStatus = useSelector((state) => state.delModalStatus);
+	const delModalStatus = useSelector((state) => state.modal.delModalStatus);
 
 	const delModal = delModalStatus ? <DeleteModal /> : null;
 

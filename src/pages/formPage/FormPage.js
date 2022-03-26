@@ -15,9 +15,9 @@ export default function FormPage() {
 	const {updatePrograms} = useUpdate();
 	const {uploadNewPrograms, uploadNewExercise} = useUpload();
 
-	const status = useSelector((state) => state.programListStatus);
-	const programList = useSelector((state) => state.programList);
-	const activeProgram = useSelector((state) => state.activeProgram);
+	const status = useSelector((state) => state.program.programListStatus);
+	const programList = useSelector((state) => state.program.programList);
+	const activeProgram = useSelector((state) => state.program.activeProgram);
 
 	const validSchema = yup.object().shape({
 		programName: yup.string('Введите строку').required('Обязательное поле*'),

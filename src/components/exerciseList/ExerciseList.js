@@ -12,8 +12,8 @@ import setContent from '../../utils/setContent';
 export default function ExerciseList() {
 	const {updateExercises} = useUpdate();
 
-	const exerciseList = useSelector((state) => state.exerciseList);
-	const exerciseListStatus = useSelector((state) => state.exerciseListStatus);
+	const exerciseList = useSelector((state) => state.exercise.exerciseList);
+	const exerciseListStatus = useSelector((state) => state.exercise.exerciseListStatus);
 
 	useEffect(() => {
 		if (exerciseListStatus !== 'idle') {
